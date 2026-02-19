@@ -1,5 +1,13 @@
-## Code Ready
+# Code Ready
 
-_No implementation summary yet._
+## CR-2: Split tests/test_checker.py into per-module test files
 
-status: idle
+- Created `tests/test_normaliser.py` — contains `TestNormalise`
+- Created `tests/test_parser.py` — contains `TestExtractLinks`
+- Created `tests/test_fetcher.py` — contains `TestCheckUrl`
+- Created `tests/test_reporter.py` — contains `TestWriteCsv`
+- Created `tests/test_checker_cli.py` — contains `TestCheckerCLI`
+- Created `tests/test_integration.py` — contains `TestIntegration`
+- Deleted `tests/test_checker.py`
+
+status: ready
