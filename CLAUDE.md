@@ -2,6 +2,49 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Commands
+
+No dependencies beyond the Python standard library. No install step needed.
+
+```bash
+# Run the checker
+python checker.py <start_url> [--output results.csv] [--workers 10] [--timeout 10] [--user-agent deadlinkchecker/1.0]
+
+# Run all tests
+python -m pytest tests/
+
+# Run a single test file
+python -m pytest tests/test_fetcher.py
+
+# Run a single test by name
+python -m pytest tests/test_fetcher.py::TestCheckUrl::test_head_success
+```
+
+Tests also work with the standard library runner: `python -m unittest tests/test_fetcher.py`.
+
+## Code Architecture
+
+The tool is a pipeline of five modules driven by `checker.py`:
+
+```
+checker.py  →  crawler.py  →  fetcher.py    (fetch_html, per-page GET)
+                           →  normaliser.py (resolve + strip fragments)
+                           →  parser.py     (extract <a href> values)
+            →  fetcher.py  (check_url, parallel HEAD/GET per link)
+            →  reporter.py (write CSV)
+```
+
+**Data flow:**
+
+1. `crawler.crawl()` performs BFS from the start URL. It fetches each internal page's HTML, extracts hrefs, normalises them, and enqueues only internal URLs. External URLs are collected but never fetched for HTML.
+2. `crawl()` returns `list[tuple[str, str]]` — `(link, referrer)` pairs covering every discovered URL (internal + external), with the start URL having an empty referrer.
+3. `checker.py` feeds those pairs into a `ThreadPoolExecutor`, calling `fetcher.check_url()` for each. Results are `(link, referrer, status_str)` where status is an HTTP code string or `ERROR:<ExceptionClassName>`.
+4. Results are sorted by `(referrer, link)` then written to CSV by `reporter.write_csv()`.
+
+**Key rules in `normaliser.py`:** fragments are stripped; non-http/https schemes return `None` and are dropped. Internal vs external is determined by matching scheme + netloc against the start URL.
+
+**`fetcher.py` has two separate functions:** `fetch_html` (follows redirects, returns body for HTML content types only, used by crawler) and `check_url` (does NOT follow redirects, records 3xx as-is, tries HEAD then falls back to GET on 405, used for status checking).
+
 ## Who is Claude Code
 
 It is a senior engineer understanding Git Flow strategy, suggesting performant, secure and clean solutions.
