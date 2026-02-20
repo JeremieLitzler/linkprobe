@@ -12,7 +12,25 @@ A CLI tool to detect broken links on any website. Given a starting URL, it crawl
 
 ## Usage
 
-> The tool is under active development. Usage instructions will be added once the CLI is available.
+No external dependencies — requires Python 3.10+ only.
+
+```bash
+python checker.py <start_url> [options]
+```
+
+| Option | Default | Description |
+| --- | --- | --- |
+| `start_url` | *(required)* | The URL to begin crawling from (must use `http` or `https`) |
+| `--output`, `-o` | `results.csv` | Path to the output CSV file |
+| `--workers`, `-w` | `10` | Number of parallel threads |
+| `--timeout`, `-t` | `10` | Per-request timeout in seconds |
+| `--user-agent` | `deadlinkchecker/1.0` | User-Agent header sent with every request |
+
+**Example:**
+
+```bash
+python checker.py https://example.com --output report.csv --workers 20
+```
 
 ## Output Format
 
