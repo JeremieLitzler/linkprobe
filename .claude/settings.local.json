@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:deadlinkchecker-sample-website.netlify.app)"
+      "WebFetch(domain:deadlinkchecker-sample-website.netlify.app)",
+      "Bash(/e/Applications/Scoop/apps/python/current/python.exe -m unittest:*)"
     ]
   }
 }
