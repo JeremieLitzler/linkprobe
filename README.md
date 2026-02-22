@@ -18,13 +18,13 @@ No external dependencies — requires Python 3.10+ only.
 python src/checker.py <start_url> [options]
 ```
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `start_url` | *(required)* | The URL to begin crawling from (must use `http` or `https`) |
-| `--output`, `-o` | `results.csv` | Path to the output CSV file |
-| `--workers`, `-w` | `10` | Number of parallel threads |
-| `--timeout`, `-t` | `10` | Per-request timeout in seconds |
-| `--user-agent` | `deadlinkchecker/1.0` | User-Agent header sent with every request |
+| Option            | Default               | Description                                                 |
+| ----------------- | --------------------- | ----------------------------------------------------------- |
+| `start_url`       | _(required)_          | The URL to begin crawling from (must use `http` or `https`) |
+| `--output`, `-o`  | `results.csv`         | Path to the output CSV file                                 |
+| `--workers`, `-w` | `10`                  | Number of parallel threads                                  |
+| `--timeout`, `-t` | `10`                  | Per-request timeout in seconds                              |
+| `--user-agent`    | `deadlinkchecker/1.0` | User-Agent header sent with every request                   |
 
 **Example:**
 
@@ -82,7 +82,7 @@ Human approval gates pause the pipeline after specs and after coding.
 
 ### Pipeline artifacts
 
-```
+```plaintext
 .agents/
 ├── user-requests.md   # your input
 ├── specs.md           # specification output
