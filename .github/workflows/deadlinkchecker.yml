@@ -19,8 +19,9 @@ jobs:
           DATE=$(date +%Y-%m-%d)
           SITES=(
             "www.cogeternal.org"
-            "www.example.com"
-            "www.another.org"
+            "fr.cogeternal.org"
+            "iamjeremie.me",
+            "jeremielitzler.fr"
           )
           mkdir -p scans
           for SITE in "${SITES[@]}"; do
