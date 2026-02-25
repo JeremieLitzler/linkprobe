@@ -1,0 +1,18 @@
+{
+  "repository": {
+    "url": "https://github.com/JeremieLitzler/deadlinkchecker"
+  },
+  "name": "deadlinkchecker-jli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "python -m pytest tests/ -v"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
+    "conventional-changelog-eslint": "^6.0.0"
+  }
+}
