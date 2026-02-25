@@ -26,14 +26,14 @@ pip install -r requirements.txt
 python src/checker.py <start_url> [options]
 ```
 
-| Option            | Default                                    | Description                                                 |
-| ----------------- | ------------------------------------------ | ----------------------------------------------------------- |
-| `start_url`       | _(required)_                               | The URL to begin crawling from (must use `http` or `https`) |
-| `--output`, `-o`  | `scans/[WEBSITE]/[TIMESTAMP]/results.csv`  | Path to the output CSV file                                 |
-| `--workers`, `-w` | `10`                                       | Number of parallel threads                                  |
-| `--timeout`, `-t` | `10`                                       | Per-request timeout in seconds                              |
-| `--user-agent`    | `deadlinkchecker/1.0`                      | User-Agent header sent with every request                   |
-| `--notify-email`  | _(omitted)_                                | Recipient address for a post-scan email notification        |
+| Option            | Default                                   | Description                                                 |
+| ----------------- | ----------------------------------------- | ----------------------------------------------------------- |
+| `start_url`       | _(required)_                              | The URL to begin crawling from (must use `http` or `https`) |
+| `--output`, `-o`  | `scans/[WEBSITE]/[TIMESTAMP]/results.csv` | Path to the output CSV file                                 |
+| `--workers`, `-w` | `10`                                      | Number of parallel threads                                  |
+| `--timeout`, `-t` | `10`                                      | Per-request timeout in seconds                              |
+| `--user-agent`    | `deadlinkchecker/1.0`                     | User-Agent header sent with every request                   |
+| `--notify-email`  | _(omitted)_                               | Recipient address for a post-scan email notification        |
 
 When `--output` is omitted, results are written to `scans/[WEBSITE]/[TIMESTAMP]/` and a `README.md` summary is produced alongside `results.csv`.
 
@@ -47,16 +47,18 @@ python src/checker.py https://example.com --output report.csv --workers 20
 
 Pass `--notify-email` with a recipient address to receive a summary email after each scan. Three environment variables must be set:
 
-| Variable              | Description                              |
-| --------------------- | ---------------------------------------- |
-| `RESEND_API_KEY`      | API key from your Resend account         |
-| `RESEND_FROM_ADDRESS` | Verified sender address in Resend        |
+| Variable              | Description                       |
+| --------------------- | --------------------------------- |
+| `RESEND_API_KEY`      | API key from your Resend account  |
+| `RESEND_FROM_ADDRESS` | Verified sender address in Resend |
 
 ```bash
 export RESEND_API_KEY=re_xxx
 export RESEND_FROM_ADDRESS=scanner@yourdomain.com
 python src/checker.py https://example.com --notify-email you@example.com
 ```
+
+See [Resend website](https://resend.com/) for setting up your account.
 
 ## Output Format
 
