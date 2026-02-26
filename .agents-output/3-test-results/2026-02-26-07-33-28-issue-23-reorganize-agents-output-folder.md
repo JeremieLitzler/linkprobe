@@ -7,7 +7,6 @@ Verified that `.agents-output/` contains exactly the expected entries.
 Actual contents of `.agents-output/`:
 ```
 1-business-specifications/
-status.md
 2-technical-specifications/
 3-test-results/
 0-user-requests/
@@ -17,7 +16,6 @@ status.md
 - `1-business-specifications/` present: PASS
 - `2-technical-specifications/` present: PASS
 - `3-test-results/` present: PASS
-- `status.md` present: PASS
 - No extra files or directories at root level: PASS
 
 **Result: PASS**

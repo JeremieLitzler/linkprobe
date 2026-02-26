@@ -12,7 +12,6 @@ Instead of flat `.md` files, use subfolders with timestamp-named files:
 │       └── [timestamp]-issue-[id]-[slug].md
 ├── 3-test-results/                   # tester agent writes here
 │       └── [timestamp]-issue-[id]-[slug].md
-└── status.md
 ```
 
 File naming: `[timestamp iso]-issue-[issue id]-[slugified issue title].md`
