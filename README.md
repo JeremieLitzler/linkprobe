@@ -120,11 +120,10 @@ Human approval gates pause the pipeline after specs and after coding.
 
 ```plaintext
 .agents-output/
-├── user-requests.md   # your input
-├── specs.md           # specification output
-├── code-ready.md      # coder output
-├── test-results.md    # test output
-└── status.md          # current pipeline stage
+├── 0-user-requests/          # your input
+├── 1-business-specifications/ # specification output
+├── 2-technical-specifications/ # coder output
+└── 3-test-results/           # test output
 ```
 
 ### Branch naming

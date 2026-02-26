@@ -7,10 +7,10 @@ Here's a concrete setup:
 ```plaintext
 project/
 ├── .agents-output/
-│   ├── specs.md          # specs-agent output
-│   ├── code-ready.md     # coder-agent output
-│   ├── test-results.md   # test-agent output
-│   └── status.md         # current pipeline stage
+│   ├── 0-user-requests/           # user request input
+│   ├── 1-business-specifications/ # specs-agent output
+│   ├── 2-technical-specifications/ # coder-agent output
+│   └── 3-test-results/            # test-agent output
 └── .agents-brain/
     ├── agent-0-orchestrator.md
     ├── agent-1-specs.md

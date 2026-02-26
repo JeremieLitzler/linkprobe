@@ -21,7 +21,6 @@ This change does NOT affect source code under `src/`, tests under `tests/`, or a
 
 ## New Folder Structure
 
-Rule: `.agents-output/` contains exactly four named subfolders plus `status.md` at the root level.
 
 | Subfolder                   | Written by          |
 | --------------------------- | ------------------- |
@@ -42,10 +41,8 @@ Example: after a run for issue #23 on 2026-02-26 between 07:33:28 and 07:37:28, 
 │       └── 2026-02-26-07-35-28-issue-23-reorganize-agents-output-folder.md
 ├── 3-test-results/
 │       └── 2026-02-26-07-37-28-issue-23-reorganize-agents-output-folder.md
-└── status.md
 ```
 
-Rule: no files exist directly under `.agents-output/` other than `status.md`.
 
 ## File Naming Convention
 
@@ -85,7 +82,6 @@ Rule: after their content is moved to `_initial.md` in the respective subfolder,
 
 Example — a reader looking for previous spec entries will find them at `.agents-output/1-business-specifications/_initial.md`, not at `.agents-output/specs.md`.
 
-Rule: `status.md` is not migrated. It remains at `.agents-output/status.md` unchanged.
 
 Rule: `_sample.md` is removed entirely. It described the old flat accumulating file format, which no longer exists.
 
@@ -181,17 +177,13 @@ Rule: the pipeline flow diagram in CLAUDE.md must be updated to show subfolders 
 
 Rule: the agents table in CLAUDE.md must be updated so the "Reads" and "Writes" columns show the new subfolder paths.
 
-## status.md
 
-Rule: `status.md` stays at `.agents-output/status.md`. Its content and format are unchanged.
 
-Rule: no agent is responsible for writing to `status.md` as part of this reorganization.
 
 ## \_sample.md
 
 Rule: `.agents-output/_sample.md` is removed. It was a reference example for the old accumulating flat-file format. The new timestamped per-run format does not require a sample file.
 
-Example — after the migration, `ls .agents-output/` shows only the four subfolders and `status.md`. The `_sample.md` file is absent.
 
 ## Commit Convention
 
