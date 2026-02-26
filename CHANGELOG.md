@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/JeremieLitzler/deadlinkchecker/compare/v1.0.0...v1.1.0) (2026-02-26)
+
+### Features
+
+* add --include-3xx-status-code flag to email notifications [#35](https://github.com/JeremieLitzler/deadlinkchecker/issues/35) ([#36](https://github.com/JeremieLitzler/deadlinkchecker/issues/36)) ([26aaead](https://github.com/JeremieLitzler/deadlinkchecker/commit/26aaeaddb76326f180788fb7dfeb077fda4a4939))
+
 ## 1.0.0 (2026-02-25)
 
 ### Features
