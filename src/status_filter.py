@@ -20,6 +20,7 @@ class StatusFilter:
             or (self._include_3xx_compat and _is_3xx(status))
         )
 
+    # Increment the running count for status codes that don't pass the filter.
     def _tally_excluded(self, summary: dict, status: str) -> None:
         if self.matches(status):
             return
