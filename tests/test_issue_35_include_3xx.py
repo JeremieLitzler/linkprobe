@@ -109,13 +109,13 @@ class TestDefaultFilterExcludes3xx(unittest.TestCase):
     def test_subject_count_excludes_3xx(self):
         """Subject count equals the number of matching rows (404, 500, ERROR = 3)."""
         subject = self.captured["subject"]
-        self.assertIn("3 result(s) matching filter", subject)
+        self.assertIn("3 broken link(s) to review", subject)
 
     def test_subject_count_matches_row_count(self):
         """Subject count matches len(non_200_results)."""
         subject = self.captured["subject"]
         expected = str(len(self.non_200))
-        self.assertIn(expected + " result(s) matching filter", subject)
+        self.assertIn(expected + " broken link(s) to review", subject)
 
     def test_3xx_rows_appear_in_excluded_summary(self):
         """301 and 302 are counted in excluded_summary."""
@@ -156,13 +156,13 @@ class TestInclude3xxCompatIncludes3xx(unittest.TestCase):
     def test_subject_count_includes_3xx(self):
         """Subject count is 5 (301, 302, 404, 500, ERROR) with 3xx compat."""
         subject = self.captured["subject"]
-        self.assertIn("5 result(s) matching filter", subject)
+        self.assertIn("5 broken link(s) to review", subject)
 
     def test_subject_count_matches_row_count(self):
         """Subject count matches len(non_200_results)."""
         subject = self.captured["subject"]
         expected = str(len(self.non_200))
-        self.assertIn(expected + " result(s) matching filter", subject)
+        self.assertIn(expected + " broken link(s) to review", subject)
 
 
 # ---------------------------------------------------------------------------
@@ -190,7 +190,7 @@ class TestOnly3xxResultsDefaultFilter(unittest.TestCase):
     def test_subject_count_is_zero(self):
         """Subject count is 0."""
         subject = self.captured["subject"]
-        self.assertIn("0 result(s) matching filter", subject)
+        self.assertIn("0 broken link(s) to review", subject)
 
     def test_3xx_appear_in_excluded_summary(self):
         """3xx codes appear in excluded_summary with correct counts."""
@@ -243,7 +243,7 @@ class TestErrorRowsAlwaysIncluded(unittest.TestCase):
         ]
         captured = _call_send(results, include_3xx_compat=False)
         self.assertEqual(len(captured["non_200_results"]), 1)
-        self.assertIn("1 result(s) matching filter", captured["subject"])
+        self.assertIn("1 broken link(s) to review", captured["subject"])
 
 
 # ---------------------------------------------------------------------------
@@ -256,7 +256,7 @@ class TestSubjectCountMatchesRowCount(unittest.TestCase):
     def _subject_count_matches(self, results, include_3xx_compat):
         captured = _call_send(results, include_3xx_compat=include_3xx_compat)
         expected_count = len(captured["non_200_results"])
-        expected_str = "{} result(s) matching filter".format(expected_count)
+        expected_str = "{} broken link(s) to review".format(expected_count)
         self.assertIn(expected_str, captured["subject"])
         return expected_count
 
@@ -313,9 +313,9 @@ class TestAll200Results(unittest.TestCase):
         self.assertEqual(captured["non_200_results"], [])
 
     def test_subject_count_zero_default_filter(self):
-        """Subject shows 0 result(s) matching filter with all-200 scan."""
+        """Subject shows 0 broken link(s) to review with all-200 scan."""
         captured = _call_send(self._ALL_200, include_3xx_compat=False)
-        self.assertIn("0 result(s) matching filter", captured["subject"])
+        self.assertIn("0 broken link(s) to review", captured["subject"])
 
     def test_all_200_appear_in_excluded_summary(self):
         """200 codes appear in excluded_summary."""

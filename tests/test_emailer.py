@@ -307,7 +307,7 @@ class TestSendEmailNotification(unittest.TestCase):
         subject = captured.get("subject", "")
         self.assertIn("example.com", subject)
         self.assertIn("1", subject)
-        self.assertIn("result(s) matching filter", subject)
+        self.assertIn("broken link(s) to review", subject)
 
     # --- delegates to _send_via_resend ---
 
@@ -359,7 +359,7 @@ class TestSendEmailNotification(unittest.TestCase):
     # --- all-200 results ---
 
     def test_empty_filtered_results_sends_email_with_zero_count(self):
-        """When filtered_results is empty, subject shows 0 result(s) matching filter."""
+        """When filtered_results is empty, subject shows 0 broken link(s) to review."""
         captured = {}
 
         def fake_send(notify_email, from_address, subject, body):
@@ -379,7 +379,7 @@ class TestSendEmailNotification(unittest.TestCase):
 
         subject = captured.get("subject", "")
         self.assertIn("0", subject)
-        self.assertIn("result(s) matching filter", subject)
+        self.assertIn("broken link(s) to review", subject)
 
 
 if __name__ == "__main__":

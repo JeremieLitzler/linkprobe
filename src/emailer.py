@@ -135,6 +135,6 @@ def send_email_notification(
         return
     resend.api_key = _RESEND_API_KEY
     filtered_count = len(filtered_results)
-    subject = "Dead link scan: {} — {} result(s) matching filter".format(website, filtered_count)
+    subject = "Dead link scan: {} - {} broken link(s) to review".format(website, filtered_count)
     body = _build_email_html(website, timestamp, total_links, filtered_results, excluded_summary)
     _send_via_resend(notify_email, _RESEND_FROM_ADDRESS, subject, body)
