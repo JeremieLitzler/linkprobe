@@ -1,3 +1,16 @@
+## [1.2.0](https://github.com/JeremieLitzler/deadlinkchecker/compare/v1.1.0...v1.2.0) (2026-04-17)
+
+### Features
+
+* **emailer:** update email subject to broken link(s) to review format ([1e57266](https://github.com/JeremieLitzler/deadlinkchecker/commit/1e57266f232d4346be95ef19df67cef5393ccd83))
+* **filter:** add --keep-status-codes parameter to filter report output closes [#39](https://github.com/JeremieLitzler/deadlinkchecker/issues/39) ([423f1d2](https://github.com/JeremieLitzler/deadlinkchecker/commit/423f1d2e56598d958ee9c70ef6ea98766d4b3c32))
+* **specs:** record specs for issue-39 add filter to keep status code in report ([616aeee](https://github.com/JeremieLitzler/deadlinkchecker/commit/616aeeec6048ae79a7a094d1c82a8367cdf00d1a))
+
+### Others
+
+* **filter:** add and update tests for --keep-status-codes and status filter closes [#39](https://github.com/JeremieLitzler/deadlinkchecker/issues/39) ([01b20df](https://github.com/JeremieLitzler/deadlinkchecker/commit/01b20dfcae87105f4a6919ed2596f4675ba5bada))
+* **filter:** clarify _tally_excluded intent with comment ([48dd65c](https://github.com/JeremieLitzler/deadlinkchecker/commit/48dd65cf3c4991cf09f992ab1806c0fd668277ef))
+
 ## [1.1.0](https://github.com/JeremieLitzler/deadlinkchecker/compare/v1.0.0...v1.1.0) (2026-02-26)
 
 ### Features
