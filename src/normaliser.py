@@ -19,9 +19,9 @@ def normalise(url: str, base: str) -> str | None:
     normalised = urllib.parse.urlunparse((
         parsed.scheme,
         parsed.netloc,
-        parsed.path,
+        urllib.parse.quote(parsed.path, safe="/:@!$&'()*+,;="),
         parsed.params,
-        parsed.query,
+        urllib.parse.quote(parsed.query, safe="=&+%"),
         "",  # strip fragment
     ))
     return normalised

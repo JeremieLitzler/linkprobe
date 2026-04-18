@@ -144,6 +144,18 @@ class TestIntegrationNoFilter(unittest.TestCase):
         statuses = [row["http_status_code"] for row in self.csv_rows]
         self.assertIn("200", statuses, msg=f"No 200 found. Rows: {self.csv_rows}")
 
+    def test_url_with_spaces_is_checked_and_returns_200(self):
+        """A link whose href contains spaces is percent-encoded and returns 200."""
+        target = f"{SAMPLE_SITE}/test%20pdf%20with%20spaces.pdf"
+        matching = [
+            row for row in self.csv_rows
+            if row["link"] == target and row["http_status_code"] == "200"
+        ]
+        self.assertTrue(
+            len(matching) >= 1,
+            msg=f"Expected {target!r} with status 200. Rows: {self.csv_rows}",
+        )
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
