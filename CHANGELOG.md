@@ -1,3 +1,13 @@
+## [2.0.0](https://github.com/JeremieLitzler/linkprobe/compare/v1.2.1...v2.0.0) (2026-04-18)
+
+### ⚠ BREAKING CHANGES
+
+* rename app (#38)
+
+### Features
+
+* rename app ([#38](https://github.com/JeremieLitzler/linkprobe/issues/38)) ([31ea1de](https://github.com/JeremieLitzler/linkprobe/commit/31ea1deed42b76d6613dfb36d243fb0cd1bd8f40))
+
 ## [1.2.1](https://github.com/JeremieLitzler/linkprobe/compare/v1.2.0...v1.2.1) (2026-04-18)
 
 ### Bug Fixes
