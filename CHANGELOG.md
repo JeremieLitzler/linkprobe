@@ -1,3 +1,9 @@
+## [2.2.1](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.2.0...v2.2.1) (2026-04-20)
+
+### Bug Fixes
+
+* add proper wrapping on <h1> ([#55](https://github.com/JeremieLitzler/deadlinkprobe/issues/55)) ([ee730d3](https://github.com/JeremieLitzler/deadlinkprobe/commit/ee730d35685eaffa81eb207e57efe63f60e861ed))
+
 ## [2.2.0](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.1.2...v2.2.0) (2026-04-20)
 
 ### Features
