@@ -17,7 +17,7 @@ No dependencies beyond the Python standard library. No install step needed.
 
 ```bash
 # Run the checker
-python src/checker.py <start_url> [--output results.csv] [--workers 10] [--timeout 10] [--user-agent linkprobe/1.0]
+python src/checker.py <start_url> [--output results.csv] [--workers 10] [--timeout 10] [--user-agent deadlinkprobe/1.0]
 
 # Run all tests
 python -m pytest tests/

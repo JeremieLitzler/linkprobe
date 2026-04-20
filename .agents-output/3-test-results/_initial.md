@@ -4,7 +4,7 @@
 
 - Python: `/e/Applications/Scoop/apps/python/current/python.exe` (3.14.3)
 - Command: `python -m unittest discover -s tests -v`
-- Working directory: `E:/Git/GitHub/linkprobe`
+- Working directory: `E:/Git/GitHub/deadlinkprobe`
 - Date: 2026-02-20
 
 ---
@@ -117,7 +117,7 @@ OK
 ## Notes
 
 - Two `ResourceWarning` messages appeared during `test_retries_get_on_405` and `test_returns_error_on_url_error` from the pre-existing `test_fetcher.py`. These originate from Python 3.14's garbage-collection detecting unclosed `HTTPError` objects in mock setups. They are cosmetic and do not affect correctness — all assertions passed.
-- The integration tests made live network requests to `https://linkprobe-sample-website.netlify.app` and validated real HTTP responses, including the expected `404` on `/about/`.
+- The integration tests made live network requests to `https://deadlinkprobe-sample-website.netlify.app` and validated real HTTP responses, including the expected `404` on `/about/`.
 - The thread-safety test uses 10 workers and 20 URLs with a 10 ms artificial delay to provoke concurrent `print()` calls, then verifies every output line matches the exact `CHECKED <url> <status>` format with no corruption.
 
 ---
@@ -137,7 +137,7 @@ status: passed
 
 - Python: `/e/Applications/Scoop/apps/python/current/python.exe` (3.14.3)
 - Command: `python -m pytest tests/ -v`
-- Working directory: `E:/Git/GitHub/linkprobe`
+- Working directory: `E:/Git/GitHub/deadlinkprobe`
 - Date: 2026-02-24
 
 ---
@@ -247,9 +247,9 @@ status: passed
 
 - Python: `/e/Applications/Scoop/apps/python/current/python.exe` (3.14.3)
 - Command: `python -m pytest tests/ -v`
-- Working directory: `E:/Git/GitHub/linkprobe`
+- Working directory: `E:/Git/GitHub/deadlinkprobe`
 - Date: 2026-02-24
-- File under review: `.github/workflows/linkprobe.yml`
+- File under review: `.github/workflows/deadlinkprobe.yml`
 
 ### Static Checks Against Spec
 
@@ -262,7 +262,7 @@ status: passed
 | 5   | That step runs `git checkout data/scans 2>/dev/null \|\| git checkout -b data/scans`                                  | PASS   | `git checkout data/scans 2>/dev/null \|\| git checkout -b data/scans` is present exactly as specified. |
 | 6   | Commit/push step uses `git push origin data/scans` (not bare `git push`)                                              | PASS   | `git push origin data/scans` — explicit remote and branch are named.                                   |
 | 7   | `git diff --cached --quiet \|\| git commit` guard is still present (no commit if nothing changed)                     | PASS   | `git diff --cached --quiet \|\| git commit -m "bot: add scan for $(date +%Y-%m-%d)"` is present.       |
-| 8   | No changes to any `src/` files or test files                                                                          | PASS   | Only `.github/workflows/linkprobe.yml` was modified; no `src/` or `tests/` files were touched.         |
+| 8   | No changes to any `src/` files or test files                                                                          | PASS   | Only `.github/workflows/deadlinkprobe.yml` was modified; no `src/` or `tests/` files were touched.     |
 
 All 8 static checks pass.
 
@@ -273,7 +273,7 @@ No Python source files changed; the test suite is run to confirm no regressions 
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0
-rootdir: E:\Git\GitHub\linkprobe
+rootdir: E:\Git\GitHub\deadlinkprobe
 collected 44 items
 
 tests/test_checker_cli.py::TestCheckerCLI::test_help_exits_zero PASSED
@@ -337,7 +337,7 @@ status: passed
 
 - Python: `/e/Applications/Scoop/apps/python/current/python.exe` (3.14.3)
 - Command: `python -m pytest tests/ -v`
-- Working directory: `E:/Git/GitHub/linkprobe`
+- Working directory: `E:/Git/GitHub/deadlinkprobe`
 - Date: 2026-02-24
 - Files under review: `.agents-brain/agent-1-specs.md`, `.agents-brain/agent-2-coder.md`
 
@@ -372,7 +372,7 @@ No Python source files changed. The test suite is run to confirm no regressions.
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0
-rootdir: E:\Git\GitHub\linkprobe
+rootdir: E:\Git\GitHub\deadlinkprobe
 collected 44 items
 
 tests/test_checker_cli.py::TestCheckerCLI::test_help_exits_zero PASSED
@@ -436,7 +436,7 @@ status: passed
 
 - Python: `/e/Applications/Scoop/apps/python/current/python.exe` (3.14.3)
 - Command: `python -m pytest tests/ -v`
-- Working directory: `E:/Git/GitHub/linkprobe`
+- Working directory: `E:/Git/GitHub/deadlinkprobe`
 - Date: 2026-02-25
 
 ---
@@ -480,7 +480,7 @@ Tests `argument_parser.build_arg_parser()` directly by calling `parse_args()` wi
 | `test_timeout_long_flag`            | `--timeout` stores the given integer              | PASS   |
 | `test_timeout_short_flag`           | `-t` is an alias for `--timeout`                  | PASS   |
 | `test_timeout_is_int`               | `--timeout` value is stored as `int`              | PASS   |
-| `test_user_agent_default`           | `--user-agent` defaults to `linkprobe/1.0`        | PASS   |
+| `test_user_agent_default`           | `--user-agent` defaults to `deadlinkprobe/1.0`    | PASS   |
 | `test_user_agent_custom`            | `--user-agent` stores the provided string         | PASS   |
 | `test_notify_email_default_is_none` | `--notify-email` defaults to `None`               | PASS   |
 | `test_notify_email_stores_address`  | `--notify-email` stores the provided address      | PASS   |
@@ -667,7 +667,7 @@ status: passed
 
 - Python: `/e/Applications/Scoop/apps/python/current/python.exe` (3.14.3)
 - Command: `python -m pytest tests/ -v`
-- Working directory: `E:/Git/GitHub/linkprobe`
+- Working directory: `E:/Git/GitHub/deadlinkprobe`
 - Date: 2026-02-25
 
 ---

@@ -6,7 +6,7 @@ Add filter to keep status code in report
 
 ## Source
 
-GitHub Issue: https://github.com/JeremieLitzler/linkprobe/issues/39
+GitHub Issue: https://github.com/JeremieLitzler/deadlinkprobe/issues/39
 
 ## Description
 

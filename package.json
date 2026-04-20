@@ -1,14 +1,14 @@
 {
   "repository": {
-    "url": "https://github.com/JeremieLitzler/linkprobe"
+    "url": "https://github.com/JeremieLitzler/deadlinkprobe"
   },
-  "name": "linkprobe-jli",
+  "name": "deadlinkprobe-jli",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "python -m pytest tests/ -v",
-    "scan": "python src/checker.py https://linkprobe-sample-website.netlify.app/",
+    "scan": "python src/checker.py https://deadlinkprobe-sample-website.netlify.app/",
     "scan-with-email": "python src/checker.py https://jeremielitzler.fr/ --notify-email "
   },
   "devDependencies": {
