@@ -147,7 +147,7 @@
         </p>
         <p class="text-slate-500 max-w-lg mb-12 leading-relaxed">
           A CLI tool that recursively crawls your site, checks every URL in
-          parallel, and exports a clean CSV report — with optional email alerts.
+          parallel, and exports a clean CSV report — with optional email reports.
         </p>
 
         <div class="flex flex-wrap gap-4 justify-center mb-20">
@@ -434,7 +434,7 @@
                 </svg>
               </div>
               <h3 class="font-semibold text-white mt-4 mb-2">
-                Email notifications
+                Email reports
               </h3>
               <p class="text-slate-400 text-sm leading-relaxed">
                 Receive a post-scan alert via the Resend API when broken links
@@ -631,7 +631,7 @@ python src/checker.py https://example.com \
               <p
                 class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-3"
               >
-                3 — Email alerts (optional)
+                3 — Email reports (optional)
               </p>
               <div class="code-block">
                 <pre><span class="text-slate-500">export RESEND_API_KEY=re_xxxx
@@ -786,7 +786,7 @@ python src/checker.py https://example.com \
                     off
                   </td>
                   <td class="px-5 py-4 text-slate-400">
-                    Include 3xx redirects in email notifications
+                    Include 3xx redirects in email reports
                   </td>
                 </tr>
               </tbody>
@@ -854,18 +854,18 @@ python src/checker.py https://example.com \
             <a
               href="#email"
               class="px-6 py-3 rounded-lg border border-slate-700 text-slate-300 hover:border-slate-500 hover:text-white transition-colors text-sm"
-              >Email notifications ↓</a
+              >Email reports ↓</a
             >
           </div>
         </div>
       </section>
 
-      <!-- ─────────────────── EMAIL NOTIFICATIONS ─────────────────── -->
+      <!-- ─────────────────── EMAIL reports ─────────────────── -->
       <section id="email" class="py-24 px-6">
         <div class="max-w-3xl mx-auto">
           <div class="text-center mb-14">
             <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-              Email notifications
+              Email reports
             </h2>
             <p class="text-slate-400 max-w-lg mx-auto leading-relaxed">
               Get a summary email whenever broken links are detected. Powered by
