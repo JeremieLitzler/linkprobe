@@ -1,3 +1,9 @@
+## [2.2.3](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.2.2...v2.2.3) (2026-04-21)
+
+### Bug Fixes
+
+* rename alerts and notifications to reports in index.html ([79e4c99](https://github.com/JeremieLitzler/deadlinkprobe/commit/79e4c994ae32f0deade459318703ffb502b85d28))
+
 ## [2.2.2](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.2.1...v2.2.2) (2026-04-20)
 
 ### Bug Fixes
