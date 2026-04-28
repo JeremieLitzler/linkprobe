@@ -1,3 +1,9 @@
+## [2.3.3](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.3.2...v2.3.3) (2026-04-28)
+
+### Bug Fixes
+
+* update index.html ([#67](https://github.com/JeremieLitzler/deadlinkprobe/issues/67)) ([4e982f6](https://github.com/JeremieLitzler/deadlinkprobe/commit/4e982f68a8d6799b662408a1d25c532b99baf3ec))
+
 ## [2.3.2](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.3.1...v2.3.2) (2026-04-28)
 
 ### Bug Fixes
