@@ -1,3 +1,10 @@
+## [2.3.0](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.2.3...v2.3.0) (2026-04-28)
+
+### Features
+
+* update icons ([#60](https://github.com/JeremieLitzler/deadlinkprobe/issues/60)) ([55e8027](https://github.com/JeremieLitzler/deadlinkprobe/commit/55e80276ed2ad956b89baba774871df32edc36d5))
+* update logo ([#60](https://github.com/JeremieLitzler/deadlinkprobe/issues/60)) ([2ea8005](https://github.com/JeremieLitzler/deadlinkprobe/commit/2ea8005bb3127eb75b593fe878d57ba444661d94))
+
 ## [2.2.3](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.2.2...v2.2.3) (2026-04-21)
 
 ### Bug Fixes
