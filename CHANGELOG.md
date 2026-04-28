@@ -1,3 +1,9 @@
+## [2.3.1](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.3.0...v2.3.1) (2026-04-28)
+
+### Bug Fixes
+
+* update release workflow to trigger full workflow ([#62](https://github.com/JeremieLitzler/deadlinkprobe/issues/62)) ([c8ec735](https://github.com/JeremieLitzler/deadlinkprobe/commit/c8ec735688421ac1c3caee0991609ba947dbe336))
+
 ## [2.3.0](https://github.com/JeremieLitzler/deadlinkprobe/compare/v2.2.3...v2.3.0) (2026-04-28)
 
 ### Features
